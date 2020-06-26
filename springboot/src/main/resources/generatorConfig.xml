@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration>
+    <!--指定了驱动jar包的位置,我用的是mysql -->
+    <classPathEntry
+            location="C:\Users\18335\.m2\repository\mysql\mysql-connector-java\8.0.15\mysql-connector-java-8.0.15.jar" />
+    <context id="calendar" targetRuntime="MyBatis3">
+        <!-- 数据库连接信息 -->
+        <jdbcConnection driverClass="com.mysql.cj.jdbc.Driver"
+                        connectionURL="jdbc:mysql://localhost:3306/lyxmysql?useUnicode=true&amp;characterEncoding=UTF-8&amp;serverTimezone=GMT%2B8&amp;useSSL=false"
+                        userId="root" password="Lyx@4187186" />
+        <!--entity实体类-->
+        <javaModelGenerator targetPackage="com.apple.springboot.index.entity" targetProject="D:/JOB/springboot"/>
+        <!-- mybatis映射xml文件 -->
+        <sqlMapGenerator targetPackage="com.apple.springboot.index" targetProject="D:/JOB/springboot"/>
+        <!--mapper接口 -->
+        <javaClientGenerator targetPackage="com.apple.springboot.index.mapper" targetProject="D:/JOB/springboot" type="XMLMAPPER" />
+        <!--数据表-->
+        <table schema="calendar" tableName="test_table" />
+    </context>
+</generatorConfiguration>
