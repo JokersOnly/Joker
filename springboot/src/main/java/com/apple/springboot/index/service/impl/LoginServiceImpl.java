@@ -16,17 +16,17 @@ public class LoginServiceImpl implements LoginService {
     @Override
     public TestTable getUserInfoById(Integer id) {
         String queryFunction = "selectByPrimaryKey";
-//        try {
-//            Method m = testTableMapper.getClass().getMethod(queryFunction,Integer.class);
-//            TestTable testTable=(TestTable) m.invoke(testTableMapper,id);
-//            return testTable;
-//        } catch (NoSuchMethodException e) {
-//            e.printStackTrace();
-//        } catch (IllegalAccessException e) {
-//            e.printStackTrace();
-//        } catch (InvocationTargetException e) {
-//            e.printStackTrace();
-//        }
+        try {
+            Method m = testTableMapper.getClass().getMethod(queryFunction,Integer.class);
+            TestTable testTable=(TestTable) m.invoke(testTableMapper,id);
+            return testTable;
+        } catch (NoSuchMethodException e) {
+            e.printStackTrace();
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        } catch (InvocationTargetException e) {
+            e.printStackTrace();
+        }
         return null;
     }
 }
