@@ -5,6 +5,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 
+// test commit
+
 @SpringBootApplication
 /*(exclude = DataSourceAutoConfiguration.class)*/
 @MapperScan(basePackages = "com.apple.springboot.index.mapper")
